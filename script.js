@@ -96,7 +96,7 @@ function pressed(x) {
   check4Winner(turn);
   turn = turn == "X" ? "O" : "X";
   document.getElementById("turn").innerHTML = `${turn}'s Turn`;
-  document.getElementById("match").innerHTML = `MATCH ${match}`;
+  document.getElementById("matchNumber").innerHTML = `MATCH ${match}`;
   moves += 1;
   if (moves == 9 && won == false) {
     document.getElementsByClassName("begin")[0].innerHTML = `Tie`;
