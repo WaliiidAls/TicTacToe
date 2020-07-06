@@ -45,10 +45,11 @@ function begin() {
     ["", "", ""],
     ["", "", ""],
   ];
-  match += 1;
   won = false;
   turn = "X";
   moves = 0;
+  match += 1;
+  document.getElementById("matchNumber").innerHTML = `MATCH ${match}`;
   document.getElementById("turn").innerHTML = `${turn}'s Turn`;
 
   document.getElementById("00").innerHTML = "";
@@ -81,7 +82,7 @@ let slots = [
   ["", "", ""],
   ["", "", ""],
 ];
-let match = 1;
+let match = 0;
 let turn = "X";
 let moves = 0;
 let won = false;
@@ -96,7 +97,6 @@ function pressed(x) {
   check4Winner(turn);
   turn = turn == "X" ? "O" : "X";
   document.getElementById("turn").innerHTML = `${turn}'s Turn`;
-  document.getElementById("matchNumber").innerHTML = `MATCH ${match}`;
   moves += 1;
   if (moves == 9 && won == false) {
     document.getElementsByClassName("begin")[0].innerHTML = `Tie`;
